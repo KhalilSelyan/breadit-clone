@@ -116,7 +116,7 @@ const Editor: FC<EditorProps> = ({ subredditId }) => {
 
   useEffect(() => {
     if (Object.keys(errors).length) {
-      for (const [_key, value] of Object.entries(errors)) {
+      for (const [, value] of Object.entries(errors)) {
         toast({
           title: "Something went wrong",
           description: (value as { message: string }).message,

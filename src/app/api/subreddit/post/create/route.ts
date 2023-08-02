@@ -36,7 +36,6 @@ export async function POST(req: Request) {
     if (error instanceof z.ZodError) {
       return new Response("Invalid request data passed", { status: 422 });
     }
-    console.log(error);
     return new Response("Could not publish, please try again later", {
       status: 500,
     });

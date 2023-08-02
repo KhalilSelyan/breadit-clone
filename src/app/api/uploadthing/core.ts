@@ -2,6 +2,7 @@ import { createUploadthing, type FileRouter } from "uploadthing/next";
 
 const f = createUploadthing();
 
+// eslint-disable-next-line no-unused-vars
 const auth = (req: Request) => ({ id: "fakeId" }); // Fake auth function
 
 export const ourFileRouter = {
@@ -13,7 +14,7 @@ export const ourFileRouter = {
 
       return { userId: user.id };
     })
-    .onUploadComplete(async ({ metadata, file }) => {}),
+    .onUploadComplete(async () => {}),
 } satisfies FileRouter;
 
 export type OurFileRouter = typeof ourFileRouter;

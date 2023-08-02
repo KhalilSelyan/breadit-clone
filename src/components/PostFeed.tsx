@@ -41,6 +41,7 @@ const PostFeed: FC<PostFeedProps> = ({ initialPosts, subredditName }) => {
 
   useEffect(() => {
     if (entry?.isIntersecting && !isFetchingNextPage) fetchNextPage();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [entry, fetchNextPage]);
 
   const posts = data?.pages.flatMap((page) => page) ?? initialPosts;
