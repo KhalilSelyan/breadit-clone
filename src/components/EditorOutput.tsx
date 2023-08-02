@@ -26,6 +26,7 @@ const renderers = {
 
 const EditorOutput: FC<EditorOutputProps> = ({ content }) => {
   return (
+    // @ts-ignore
     <Output
       data={content}
       style={style}
